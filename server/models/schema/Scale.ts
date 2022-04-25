@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 
 // sub-schema for the Cost model
-const scaleSchema = Schema({
+const scaleSchema = new Schema({
   A: {
     type: Number,
   },

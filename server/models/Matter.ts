@@ -1,7 +1,9 @@
 import { Schema, model } from "mongoose";
 
 // takes sub-schema for quantum, offer, and milestones
-import { quantumSchema, offerSchema, milestoneSchema } from "./schema";
+import quantumSchema from "./schema/Quantum";
+import milestoneSchema from "./schema/Milestone";
+import offerSchema from "./schema/Offer";
 
 const matterSchema = new Schema({
   reference: {

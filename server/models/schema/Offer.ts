@@ -1,8 +1,7 @@
 import { Schema } from "mongoose";
 
-import dateFormatter from "../../utils/dateFormatter";
-
-const offerSchema = new Schema(
+// sub-schema for the Matter model
+const offerSchema: object = new Schema(
   {
     isPlaintiff: {
       type: Boolean,
@@ -15,15 +14,8 @@ const offerSchema = new Schema(
     date: {
       type: Date,
       required: true,
-      get: dateFormatter(),
     },
   },
-  {
-    toJSON: {
-      getters: true,
-    },
-    id: false,
-  }
 );
 
 export default offerSchema;

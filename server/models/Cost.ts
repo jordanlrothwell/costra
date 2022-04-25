@@ -1,9 +1,9 @@
 import { Schema, model } from "mongoose";
 
 // takes sub-schema for scale
-import { scaleSchema } from "./schema";
+import scaleSchema from "./schema/Scale";
 
-const costSchema = Schema({
+const costSchema = new Schema({
   itemNumber: {
     type: Number,
     required: true,
@@ -12,6 +12,7 @@ const costSchema = Schema({
     type: String,
     required: true,
   },
+  // imported sub-schema
   scale: [scaleSchema],
   category: {
     type: String,
@@ -23,6 +24,6 @@ const costSchema = Schema({
   },
 });
 
-const Model = model("Cost", costSchema);
+const Cost = model("Cost", costSchema);
 
-export default Model;
+export default Cost;
