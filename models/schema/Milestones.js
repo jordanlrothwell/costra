@@ -1,7 +1,9 @@
 import { Schema } from "mongoose";
 
+// import helper to format dates
 import dateFormatter from "../../utils/dateFormatter";
 
+// sub-schema for the Matter model
 const milestoneSchema = new Schema(
   {
     defence: {
