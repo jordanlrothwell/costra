@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 // takes sub-schema for scale
 import scaleSchema from "./schema/Scale";
 
-const costSchema = new Schema({
+const costSchema: Schema = new Schema({
   itemNumber: {
     type: Number,
     required: true,

@@ -1,7 +1,18 @@
 import { Schema } from "mongoose";
 
-// sub-schema for the Cost model
-const scaleSchema = new Schema({
+// Create an interface representing a document in MongoDB
+interface scaleIF {
+  A: number;
+  B: number;
+  C: number;
+  D: number;
+  E: number;
+  F: number;
+  G: number;
+}
+
+// Create a Schema corresponding to the document interface
+const scaleSchema = new Schema<scaleIF>({
   A: {
     type: Number,
   },

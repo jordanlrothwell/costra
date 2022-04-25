@@ -1,7 +1,7 @@
 import moment from "moment";
 
-const dateFormatter = function (date) {
+function dateFormatter(date: Date) {
   return moment(date).format("DD MMMM YYYY");
-};
+}
 
 export default dateFormatter;
